@@ -5,7 +5,7 @@ Instead of image editing apps, I decided to design [my linkedin account](https:/
 # Why?
 * ✅ Easy item positioning vs apps like photoshop 
 * ✅ Easy to use glass effect with only one widget, [BackdropFilter](https://api.flutter.dev/flutter/widgets/BackdropFilter-class.html)
-* ✅ Easy to change everything with only editing some texts, no need to open heavy image editing apps
+* ✅ Easy to change everything only with editing some texts, no need to open heavy image editing apps
 * ✅ Easy to edit icon styles, no need to edit every single item manually
 
 # Result
