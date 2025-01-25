@@ -41,71 +41,76 @@ class MainApp extends StatelessWidget {
                   ])),
                 ),
                 Align(
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        "AmirAbbas Jannatian",
-                        style: TextStyle(
-                          color: Color(0xB3FFFFFF),
-                          fontSize: width * 0.036,
-                          height: 0.8,
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: width*.035),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          "AmirAbbas Jannatian",
+                          style: TextStyle(
+                            color: Color(0xB3FFFFFF),
+                            fontSize: width * 0.036,
+                            height: 0.8,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "Mobile Application Developer",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: width * 0.042,
-                          fontWeight: FontWeight.bold,
+                        Text(
+                          "Mobile Application Developer",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: width * 0.042,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: width*.008),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: width*.028,
-                        children: [
-                          ...[flutter, dart, kotlin, androidStudio, android, apple].map((e) => GlassIconBox(
-                            iconSvg: e,
-                            size: width * .05,
-                          ))
-                        ],
-                      ),
-                      SizedBox(height: width*.008),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.string(
-                            gmail,
-                            color: Color(0xE5FFFFFF),
-                            width: width * .02,
-                          ),
-                          SizedBox(width: width * 0.005),
-                          Text(
-                            "amirabbasaa@gmail.com",
-                            style: TextStyle(
+                        SizedBox(height: width * .008),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          spacing: width * .028,
+                          children: [
+                            ...[kotlin, dart, flutter, androidStudio, android, apple].map((e) => GlassIconBox(
+                                  iconSvg: e,
+                                  size: width * .05,
+                                ))
+                          ],
+                        ),
+                        SizedBox(height: width * .008),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.string(
+                              gmail,
                               color: Color(0xE5FFFFFF),
-                              fontSize: width * 0.02,
+                              width: width * .02,
                             ),
-                          ),
-                          SizedBox(width: width * 0.24),
-                          SvgPicture.string(
-                            github,
-                            color: Color(0xE5FFFFFF),
-                            width: width * .02,
-                          ),
-                          SizedBox(width: width * 0.005),
-                          Text(
-                            "amir14a",
-                            style: TextStyle(
+                            SizedBox(width: width * 0.005),
+                            Text(
+                              "amirabbasaa@gmail.com",
+                              style: TextStyle(
+                                color: Color(0xE5FFFFFF),
+                                fontSize: width * 0.02,
+                              ),
+                            ),
+                            SizedBox(width: width * 0.24),
+                            SvgPicture.string(
+                              github,
                               color: Color(0xE5FFFFFF),
-                              fontSize: width * 0.02,
+                              width: width * .02,
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            SizedBox(width: width * 0.005),
+                            Text(
+                              "amir14a",
+                              style: TextStyle(
+                                color: Color(0xE5FFFFFF),
+                                fontSize: width * 0.02,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -127,19 +132,16 @@ class GlassIconBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.white,
-            width: size*.03
-          ),
+          border: Border.all(color: Colors.white, width: size * .03),
           borderRadius: BorderRadius.circular(size * .45)),
       child: ClipRRect(
-          borderRadius: BorderRadius.circular(size * .45),
+        borderRadius: BorderRadius.circular(size * .45),
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 16,sigmaY: 16),
+          filter: ImageFilter.blur(sigmaX: 16, sigmaY: 16),
           child: Container(
             color: Color(0x1AFFFFFF),
             child: Padding(
-              padding: EdgeInsets.all(size*.25),
+              padding: EdgeInsets.all(size * .25),
               child: SvgPicture.string(
                 iconSvg,
                 width: size,
